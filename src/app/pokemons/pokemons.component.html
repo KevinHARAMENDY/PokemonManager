@@ -4,8 +4,8 @@
 <br><br>
 <div *ngIf="pokemon">
   <ul *ngFor="let poke of pokemon">
-    <li class="text-muted" style="float: left; margin-left: 75px">
-
+    <li class="text-muted" style="float: left; margin-right: 150px">
+      <img src="{{poke.image}}">
       {{poke.nom}}
       <span style="margin-left: 30px;">
         <ul>
