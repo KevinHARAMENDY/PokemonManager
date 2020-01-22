@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenerationsComponent implements OnInit {
 
+  private tabGeneration = ['Génération I', 'Génération II', 'Génération III', 'Génération IV', 'Génération V', 'Génération VI', 'Génération VII', 'Génération VIII'];
+  private cpt = 0;
   constructor() { }
 
   ngOnInit() {
