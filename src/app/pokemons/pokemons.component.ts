@@ -10,7 +10,7 @@ export class PokemonsComponent implements OnInit {
   private img = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 
   private pokemon = [
-    { id : 1, nom : 'Bulbizarre', types : ['Poison', 'Plante'], taille : '0,7', poids : '6,9', image : this.img + '1.png' },
+    { nom : 'Bulbizarre', types : ['Poison', 'Plante'], taille : '0,7', poids : '6,9', image : this.img + '1.png' },
     { nom : 'Herbizarre', types : ['Poison', 'Plante'], taille : '1', poids : '13', image : this.img + '2.png' },
     { nom : 'Florizarre', types : ['Poison', 'Plante'], taille : '0,7', poids : '6,9', image : this.img + '3.png' },
     { nom : 'Salamèche', types : ['Feu'], taille : '0,6', poids : '8,5', image : this.img + '4.png' },
