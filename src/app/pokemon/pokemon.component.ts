@@ -9,7 +9,6 @@ export class PokemonComponent implements OnInit {
 
   @Input() pk;
   @Output() choix = new EventEmitter();
-  private pic = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png';
 
   clicPokemon() {
     this.choix.emit(this.pk);
