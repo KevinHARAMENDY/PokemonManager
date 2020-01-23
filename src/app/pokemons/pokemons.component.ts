@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PokemonService} from '../services/pokemon.service';
+import {Pokemon} from '../modeles/pokemon';
 
 @Component({
   selector: 'app-pokemons',
@@ -7,14 +8,19 @@ import {PokemonService} from '../services/pokemon.service';
   styleUrls: ['./pokemons.component.css']
 })
 export class PokemonsComponent implements OnInit {
-
   choice;
+  pokemons: Array<Pokemon>;
+  nb: number;
 
   constructor(private service: PokemonService) {}
 
-  tab = this.service.pokemon;
-  nb = this.service.nbPokemons();
+  initTableau() {
+    this.pokemons = this.service.getPokemons();
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.initTableau();
+    this.nb = this.service.nbPokemons();
+  }
 
 }

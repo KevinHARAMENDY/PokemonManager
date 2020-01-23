@@ -4,9 +4,9 @@
 <br><br>
 <div class="text-muted">Nombre de Pokémons renseignés : <span class="text-danger">{{nb}}</span></div>
 <div class="text-muted" *ngIf="choice">Pokémon sélectionné : <span class="text-danger">{{choice.nom}}</span></div>
-<div *ngIf="tab">
+<div *ngIf="pokemons">
   <ul>
-    <li *ngFor="let poke of tab" class="text-muted" style="float: left; margin-right: 150px">
+    <li *ngFor="let poke of pokemons" class="text-muted" style="float: left; margin-left: 80px">
       <app-pokemon [pk]=poke (choix)="choice=$event"></app-pokemon>
     </li>
   </ul>

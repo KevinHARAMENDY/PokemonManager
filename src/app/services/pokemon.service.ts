@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {Pokemon} from '../modeles/pokemon';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ export class PokemonService {
 
   private img = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 
-  pokemon = [
+  private pokemon = [
     { id : 1, nom : 'Bulbizarre', types : ['Poison', 'Plante'], taille : '0,7', poids : '6,9', image : this.img + '1.png' },
     { id : 2, nom : 'Herbizarre', types : ['Poison', 'Plante'], taille : '1', poids : '13', image : this.img + '2.png' },
     { id : 3, nom : 'Florizarre', types : ['Poison', 'Plante'], taille : '0,7', poids : '6,9', image : this.img + '3.png' },
@@ -27,12 +28,19 @@ export class PokemonService {
     { id : 17, nom : 'Roucoups', types : ['Normal', 'Vol'], taille : '1,1', poids : '30', image : this.img + '17.png' },
     { id : 18, nom : 'Roucarnage', types : ['Normal', 'Vol'], taille : '1,5', poids : '39,5', image : this.img + '18.png' },
     { id : 19, nom : 'Rattata', types : ['Normal'], taille : '0,3', poids : '3,5', image : this.img + '19.png' },
-    { id : 20, nom : 'Rattatac', types : ['Normal'], taille : '0,7', poids : '18,5', image : this.img + '20.png' }
+    { id : 20, nom : 'Rattatac', types : ['Normal'], taille : '0,7', poids : '18,5', image : this.img + '20.png' },
+    { id : 21, nom : 'Piafabec', types : ['Normal', 'Vol'], taille : '0,3', poids : '2', image : this.img + '21.png' },
+    { id : 22, nom : 'Rapasdepic', types : ['Normal', 'Vol'], taille : '1,2', poids : '38', image : this.img + '22.png' },
+    { id : 23, nom : 'Abo', types : ['Poison'], taille : '2', poids : '6,9', image : this.img + '23.png' },
+    { id : 24, nom : 'Arbok', types : ['Poison'], taille : '3,5', poids : '65', image : this.img + '24.png' }
   ];
 
+  getPokemons(): Array<Pokemon> {
+    return this.pokemon;
+  }
+
   nbPokemons(): number {
-    const nombre = this.pokemon.length;
-    return nombre;
+    return this.pokemon.length;
   }
 
   constructor() { }
