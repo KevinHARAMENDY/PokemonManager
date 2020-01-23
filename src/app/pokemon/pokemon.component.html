@@ -1,0 +1,22 @@
+<img src="{{pic}}" (click)="clicPokemon()">
+  <span class="text-danger">{{pk.id | number : '3.0-0'}}</span>
+  <span style="margin-left: 30px;"><br>
+        Nom : {{pk.nom}}
+        <ul>
+            <li *ngIf="pk.types.length == 1; else elseType">{{pk.types[0]}}</li>
+          <ng-template #elseType>
+            <li>{{pk.types[0]}}</li>
+            <li>{{pk.types[1]}}</li>
+          </ng-template>
+        </ul>
+
+      <div *ngIf="pk.taille; else elseTaille">
+        Taille : {{pk.taille}}m<br>
+      </div>
+      <ng-template #elseTaille>Taille : N/A</ng-template>
+
+      <div *ngIf="pk.poids; else elsePoids">
+        Poids : {{pk.poids}}kg<br>
+      </div>
+      <ng-template #elsePoids>Poids : N/A</ng-template>
+  </span>

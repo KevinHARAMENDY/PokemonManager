@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GenerationsComponent } from './generations/generations.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
+import { PokemonComponent } from './pokemon/pokemon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GenerationsComponent,
-    PokemonsComponent
+    PokemonsComponent,
+    PokemonComponent
   ],
   imports: [
     BrowserModule,

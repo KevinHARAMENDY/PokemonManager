@@ -2,30 +2,11 @@
 
 <span class="lead display-4 text-danger"><strong><u>Pokémons</u></strong></span>
 <br><br>
+<div class="text-muted" *ngIf="choice">Pokémon sélectionné : <span class="text-danger">{{choice.nom}}</span></div>
 <div *ngIf="pokemon">
-  <ul *ngFor="let poke of pokemon">
-    <li class="text-muted" style="float: left; margin-right: 150px">
-      <img src="{{poke.image}}">
-      {{poke.nom}}
-      <span style="margin-left: 30px;">
-        <ul>
-            <li *ngIf="poke.types.length == 1; else elseType">{{poke.types[0]}}</li>
-          <ng-template #elseType>
-            <li>{{poke.types[0]}}</li>
-            <li>{{poke.types[1]}}</li>
-          </ng-template>
-        </ul>
-
-      <div *ngIf="poke.taille; else elseTaille">
-        Taille : {{poke.taille}}m<br>
-      </div>
-      <ng-template #elseTaille>Taille : N/A</ng-template>
-
-      <div *ngIf="poke.poids; else elsePoids">
-        Poids : {{poke.poids}}kg<br>
-      </div>
-      <ng-template #elsePoids>Poids : N/A</ng-template>
-      </span>
+  <ul>
+    <li *ngFor="let poke of pokemon" class="text-muted" style="float: left; margin-right: 150px">
+      <app-pokemon [pk]=poke (choix)="choice=$event"></app-pokemon>
     </li>
   </ul>
 </div>
