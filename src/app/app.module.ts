@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GenerationsComponent } from './generations/generations.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PokemonComponent } from './pokemon/pokemon.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

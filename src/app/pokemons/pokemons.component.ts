@@ -18,9 +18,16 @@ export class PokemonsComponent implements OnInit {
     this.pokemons = this.service.getPokemons();
   }
 
+  envoiForm(nom) {
+    this.pokemons =  this.service.triPoke(nom);
+  }
+
+  reinitialiser() {
+    this.pokemons = this.service.getPokemons();
+  }
+
   ngOnInit() {
     this.initTableau();
     this.nb = this.service.nbPokemons();
   }
-
 }

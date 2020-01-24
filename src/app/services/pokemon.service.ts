@@ -43,5 +43,11 @@ export class PokemonService {
     return this.pokemon.length;
   }
 
+  triPoke(name) {
+    const regex = new RegExp(name, 'gi');
+    return this.pokemon.filter(poke => poke.nom.match(regex));
+  }
+
   constructor() { }
+
 }

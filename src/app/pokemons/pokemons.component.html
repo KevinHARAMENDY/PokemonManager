@@ -3,8 +3,16 @@
 <span class="lead display-4 text-danger"><strong><u>Pokémons</u></strong></span>
 <br><br>
 <div class="text-muted">Nombre de Pokémons renseignés : <span class="text-danger">{{nb}}</span></div>
-<div class="text-muted" *ngIf="choice">Pokémon sélectionné : <span class="text-danger">{{choice.nom}}</span></div>
+<div class="text-muted" *ngIf="choice">Pokémon sélectionné : <span class="text-danger">{{choice.nom}}</span></div><br>
+<div>
+  <form #formulaire="ngForm">
+      <input class="form-control form-control-lg" type="text" name="recherche" id="recherche" placeholder="Rechercher..."
+             ngModel (keyup)="envoiForm(formulaire.value.recherche)"><br>
+      <input type="button" class="btn btn-outline-danger" value="Réinitialiser" (click)="reinitialiser()">
+  </form>
+</div>
 <div *ngIf="pokemons">
+  <div *ngIf="pokemons.length < 1" class="text-muted"><br>Aucun pokémon trouvé</div>
   <ul>
     <li *ngFor="let poke of pokemons" class="text-muted" style="float: left; margin-left: 80px">
       <app-pokemon [pk]=poke (choix)="choice=$event"></app-pokemon>
