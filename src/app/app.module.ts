@@ -7,13 +7,19 @@ import { GenerationsComponent } from './generations/generations.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import {FormsModule} from '@angular/forms';
+import { AccueilComponent } from './accueil/accueil.component';
+import { MainComponent } from './main/main.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GenerationsComponent,
     PokemonsComponent,
-    PokemonComponent
+    PokemonComponent,
+    AccueilComponent,
+    MainComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
