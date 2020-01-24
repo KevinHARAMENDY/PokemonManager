@@ -4,8 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   /*{
-    path : (lien) CELA VA SE GREFFER SUR L'URL /(: pour paramétrer)    route joker : **                    |   mettre joker a la fin
-    component : (composant) NOM DU COMPOSANT                           route joker : choisir un composant  |
+    path : (lien) CELA VA SE GREFFER SUR L'URL /(: pour paramétrer ex : id)    route joker : **                    |   mettre joker a la fin
+    component : (composant) NOM DU COMPOSANT                                   route joker : choisir un composant  |
+    mettre private route dans constructeur ts
+     -> this.route.snapshot.paramMap.get('id')
    }*/
 ];
 
