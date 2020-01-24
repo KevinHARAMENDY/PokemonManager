@@ -24,6 +24,7 @@ export class PokemonsComponent implements OnInit {
 
   reinitialiser() {
     this.pokemons = this.service.getPokemons();
+    this.choice = '';
   }
 
   ngOnInit() {
